@@ -1,1 +1,19 @@
 <h1>bookers</h1>
+<table Width="700">
+  <thead>
+    <tr>
+      <th width="35%">title</th>
+      <th width="35%">body</th>
+      <th width="30%"colspan3></th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+<%= form_with mldel: @book do |f| %>
+  <h4>title</h4>
+  <%= f.text_field :title%>
+  <h4>body</h4>
+  <%= f.text_area :body%>
+  <br><%= f.submit "Create Book"%>
+<% end %>
