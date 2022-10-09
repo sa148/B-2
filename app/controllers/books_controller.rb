@@ -13,6 +13,20 @@ class BooksController < ApplicationController
     end
   end
 
+  def show
+    @book = Book.find(params[:id])
+  end
+
+  def edit
+    @book = Book.find(params[:id])
+  end
+
+  def destory
+    @book = Book.find(params[:id])
+    book.destory
+    redirect_to books_path
+  end
+
   def index
     @books = Book.all
     @book = Book.new(book_params)
